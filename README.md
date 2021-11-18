@@ -1,1 +1,1 @@
-this is the coming soon page
+This is the coming soon page.
