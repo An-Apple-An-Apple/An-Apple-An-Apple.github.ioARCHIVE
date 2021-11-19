@@ -83,6 +83,7 @@
             text-align: center;
 
             color: #D6D6D6;
+            text-decoration: none;
         }
 
         /*Since .greyNavigationBar is fixed, it does not take up space, .placeHolder is a blank div used to take up the space of
@@ -108,25 +109,26 @@
 <body class="body">
     <div class="greyNavigationBar">
         <div class="navigationBarIcons">
-            <img src="Logo.png" class="logo">
-            <div class="icons" id="computerGraphics">
-                Computer Graphics
-            </div>
+            <a href="index.html" class="icons">
+                <img src="Logo.png" class="logo">
+                <div class="icons" id="computerGraphics">
+                    Computer Graphics
+                </div>
+            </a>
             <div class="icons" id="render">
-                Render
+                <a href="render.html" class="icons">Render</a>
             </div>
             <div class="icons" id="simulation">
-                Simulation
+                <a href="simulation.html" class="icons">Simulation</a>
             </div>
             <div class="icons" id="references">
-                References
+                <a href="references.html" class="icons">Render</a>
             </div>
         </div>
     </div>
     <div id="placeHolder">
         <div id="gradientComputerGraphicContainer">
             <img src="Computer Graphics.png" id="gradientComputerGraphic">
-          Simulation
         </div>
 
 </html>
