@@ -102,13 +102,15 @@
             padding-top: 45px;
         }
 
-        .greySection {
-            width: 1355px;
-            height: 768px;
+        .mainContainer {
+            padding: 45px;
+        }
 
+        .greySection {
+            height: 53vw;
+            min-height: 400px;
             margin-top: 45px;
-            margin-left: 45px;
-            margin-right: 45px;
+
 
             background: #F9F9F9;
             border-radius: 20px;
@@ -118,17 +120,23 @@
         }
 
         .smallGreySectionContainer {
+
+            margin-top: 45px;
+
+
             display: flex;
             align-items: center;
         }
 
-        .leftSmallGreySection {
-            width: 655px;
-            height: 768px;
+        .smallGreySection {
+            width: 50%;
 
-            margin-top: 45px;
-            margin-left: 45px;
-            margin-right: 45px;
+        }
+
+        .leftSmallGreySection {
+            margin-right: 22.5px;
+            height: 53vw;
+            min-height: 400px;
 
             background: #F9F9F9;
             border-radius: 20px;
@@ -138,11 +146,9 @@
         }
 
         .rightSmallGreySection {
-            width: 655px;
-            height: 768px;
-
-            margin-top: 45px;
-            margin-right: 45px;
+            margin-left: 22.5px;
+            height: 53vw;
+            min-height: 400px;
 
             background: #F9F9F9;
             border-radius: 20px;
@@ -153,74 +159,33 @@
 
         .greySectionTexts {
             position: relative;
-            width: 1355px;
+            margin: auto;
             height: 82px;
 
             /* greySectionLargeTexts */
             font-family: 'Roboto', sans-serif;
             font-style: normal;
             font-weight: bold;
-            font-size: 70px;
+            font-size: 5vw;
             line-height: 82px;
             /* identical to box height */
             align-items: center;
             text-align: center;
 
-
-
             color: #000000;
         }
 
         .learnMoreBox {
-            width: 152px;
-            height: 40px;
+            width: 10.5vw;
+            min-width: 84px;
+            height: 2.8vw;
+            min-height: 22.14px;
 
             margin: auto;
-            margin-top: 70px;
+            margin-top: 4.84vw;
 
-            background: #C4C4C4;
-            border-radius: 20px;
             display: flex;
             align-items: center;
-        }
-
-        .learnMoreContiner {
-            width: 116.91;
-            height: 27;
-            display: flex;
-            align-items: center;
-
-            margin: auto;
-
-        }
-
-        .learnMoreTexts {
-            width: 112px;
-            height: 27px;
-
-            font-family: "Open Sans", sans-serif;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 18px;
-            line-height: 25px;
-            text-align: center;
-
-            margin: auto;
-
-            color: #000000;
-
-        }
-
-        .learnMoreTri {
-            width: 4.91px;
-            height: 11.35px;
-
-            margin: auto;
-            margin-top: 8.83px;
-        }
-
-        .link {
-            text-decoration: none;
         }
     </style>
 </head>
@@ -248,70 +213,46 @@
             </div>
         </div>
     </div>
-    <div class="placeHolder"></div>
-    <div class="greySection">
-        <div class="greySectionTexts">
-            Computer Graphics
-            <a href="computerGraphics.html" class="link">
-                <div class="learnMoreBox">
-                    <div class="learnMoreContiner">
-                        <div class="learnMoreTexts">
-                            Learn More
-                        </div>
-                        <img src="Learn More Tri.png" class="learnMoreTri">
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="smallGreySectionContainer">
-        <div class="leftSmallGreySection">
+    <div class="mainContainer">
+        <div class="greySection">
             <div class="greySectionTexts">
-                Render
-                <a href="render.html" class="link">
-                    <div class="learnMoreBox">
-                        <div class="learnMoreContiner">
-                            <div class="learnMoreTexts">
-                                Learn More
-                            </div>
-                            <img src="Learn More Tri.png" class="learnMoreTri">
-                        </div>
-                    </div>
+                Computer Graphics
+                <a href="computerGraphics.html" class="link">
+                    <img src="learnMoreCombined.png" class="learnMoreBox">
                 </a>
             </div>
         </div>
-        <div class="rightSmallGreySection">
-            <div class="greySectionTexts">
-                Simulation
-                <a href="simulation.html" class="link">
-                    <div class="learnMoreBox">
-                        <div class="learnMoreContiner">
-                            <div class="learnMoreTexts">
-                                Learn More
-                            </div>
-                            <img src="Learn More Tri.png" class="learnMoreTri">
-                        </div>
+        <div class="smallGreySectionContainer">
+            <div class="smallGreySection">
+                <div class="leftSmallGreySection">
+                    <div class="greySectionTexts">
+                        Render
+                        <a href="render.html" class="link">
+                            <img src="learnMoreCombined.png" class="learnMoreBox">
+                        </a>
                     </div>
+                </div>
+            </div>
+            <div class="smallGreySection">
+                <div class="rightSmallGreySection">
+                    <div class="greySectionTexts">
+                        Simulation
+                        <a href="simulation.html" class="link">
+                            <img src="learnMoreCombined.png" class="learnMoreBox">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="greySection">
+            <div class="greySectionTexts">
+                Artificial Intelligence
+                <a href="artificialIntelligence.html" class="link">
+                    <img src="learnMoreCombined.png" class="learnMoreBox">
                 </a>
             </div>
         </div>
     </div>
-    <div class="greySection">
-        <div class="greySectionTexts">
-            Artificial Intelligence
-            <a href="artificialIntelligence.html" class="link">
-                <div class="learnMoreBox">
-                    <div class="learnMoreContiner">
-                        <div class="learnMoreTexts">
-                            Learn More
-                        </div>
-                        <img src="Learn More Tri.png" class="learnMoreTri">
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="placeHolder">
-    </div>
+
 
 </html>
