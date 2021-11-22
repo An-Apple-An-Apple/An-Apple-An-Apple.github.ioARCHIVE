@@ -100,13 +100,19 @@
         /*Since .greyNavigationBar is fixed, it does not take up space, .placeHolder is a blank div used to take up the space of
           .greyNavigationBar so all div under are placed after .greyNavigationBar not under.*/
 
+        .borderRadius {
+            border-radius: 8px;
+        }
+
         .placeHolder {
             padding-top: 45px;
         }
 
-        .mainContainer {}
+        .mainContainer {
+            padding: max(14px, 1.12vw);
+        }
 
-        .greySection {
+        .greySections {
             height: 53vw;
             min-height: 400px;
             max-width: 1450px;
@@ -115,7 +121,6 @@
             margin-bottom: max(14px, 1.12vw);
 
             background: #F3F3F3;
-            /* box-shadow: inset 0px 0px 40px 30px rgba(201, 201, 201, 0.2); */
             /* border-radius: 20px; */
 
             display: flex;
@@ -130,7 +135,6 @@
             margin: auto;
 
             background: #F3F3F3;
-            /* box-shadow: inset 0px 0px 40px 30px rgba(201, 201, 201, 0.2); */
             /* border-radius: 20px; */
 
             display: flex;
@@ -155,10 +159,8 @@
             height: 53vw;
             min-height: 400px;
             margin-right: max(7px, 0.56vw);
-            margin-left: max(7px, 1.12vw);
 
             background: #F3F3F3;
-            /* box-shadow: inset 0px 0px 40px 30px rgba(201, 201, 201, 0.2); */
             /* border-radius: 20px; */
 
             display: flex;
@@ -169,10 +171,8 @@
             height: 53vw;
             min-height: 400px;
             margin-left: max(7px, 0.56vw);
-            margin-right: max(7px, 1.12vw);
 
             background: #F3F3F3;
-            /* box-shadow: inset 0px 0px 40px 30px rgba(201, 201, 201, 0.2); */
             /* border-radius: 20px; */
 
             display: flex;
@@ -188,7 +188,7 @@
             font-family: 'Roboto', sans-serif;
             font-style: normal;
             font-weight: bold;
-            font-size: max(5vw, 16px);
+            font-size: max(5vw, 20px);
             line-height: 82px;
             /* identical to box height */
             align-items: center;
@@ -283,8 +283,10 @@
         </div>
     </div>
     <div class="placeHolder"></div>
+
+    </div>
     <div class="mainContainer">
-        <div class="greySection">
+        <div class="greySections borderRadius">
             <div class="greySectionTexts">
                 Computer Graphics
                 <a href="computerGraphics.html" class="link">
@@ -301,7 +303,7 @@
         </div>
         <div class="smallGreySectionContainer">
             <div class="smallGreySection">
-                <div class="leftSmallGreySection">
+                <div class="leftSmallGreySection borderRadius">
                     <div class="greySectionTexts">
                         Render
                         <a href="render.html" class="link">
@@ -318,7 +320,7 @@
                 </div>
             </div>
             <div class="smallGreySection">
-                <div class="rightSmallGreySection">
+                <div class="rightSmallGreySection borderRadius">
                     <div class="greySectionTexts">
                         Simulation
                         <a href="simulation.html" class="link">
@@ -335,7 +337,7 @@
                 </div>
             </div>
         </div>
-        <div class="greySectionBottom">
+        <div class="greySectionBottom borderRadius">
             <div class="greySectionTexts">
                 Artificial Intelligence
                 <a href="artificialIntelligence.html" class="link">
@@ -352,5 +354,15 @@
         </div>
     </div>
 
+</body>
+<script>
+    var borRadVal = "8px";
+    function borderFunction() {
+        var x = document.getElementsByClassName("borderRadius");
+        for (var i = 0; i < x.length; i++)
+            x[i].style.borderRadius = borRadVal;
+    }
+    borderFunction()
+</script>
 
 </html>
