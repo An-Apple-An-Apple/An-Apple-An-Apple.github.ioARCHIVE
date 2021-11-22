@@ -100,9 +100,11 @@
         /*Since .greyNavigationBar is fixed, it does not take up space, .placeHolder is a blank div used to take up the space of
           .greyNavigationBar so all div under are placed after .greyNavigationBar not under.*/
 
-        .mainContainer {
-            padding: max(18px, 3.12vw);
+        .placeHolder {
+            padding-top: 45px;
         }
+
+        .mainContainer {}
 
         .greySection {
             height: 53vw;
@@ -110,11 +112,26 @@
             max-width: 1450px;
 
             margin: auto;
-            margin-top: max(18px, 3.12vw);
+            margin-bottom: max(18px, 1.12vw);
 
             background: #F9F9F9;
             box-shadow: inset 0px 0px 40px 30px rgba(201, 201, 201, 0.2);
-            border-radius: 20px;
+            /* border-radius: 20px; */
+
+            display: flex;
+            align-items: center;
+        }
+
+        .greySectionBottom {
+            height: 53vw;
+            min-height: 400px;
+            max-width: 1450px;
+
+            margin: auto;
+
+            background: #F9F9F9;
+            box-shadow: inset 0px 0px 40px 30px rgba(201, 201, 201, 0.2);
+            /* border-radius: 20px; */
 
             display: flex;
             align-items: center;
@@ -124,7 +141,7 @@
             max-width: 1450px;
 
             margin: auto;
-            margin-top: max(18px, 3.12vw);
+            margin-bottom: max(18px, 1.12vw);
 
             display: flex;
             align-items: center;
@@ -137,11 +154,12 @@
         .leftSmallGreySection {
             height: 53vw;
             min-height: 400px;
-            margin-right: max(9px, 1.56vw);
+            margin-right: max(9px, 0.56vw);
+            margin-left: max(9px, 1.12vw);
 
             background: #F9F9F9;
             box-shadow: inset 0px 0px 40px 30px rgba(201, 201, 201, 0.2);
-            border-radius: 20px;
+            /* border-radius: 20px; */
 
             display: flex;
             align-items: center;
@@ -150,11 +168,12 @@
         .rightSmallGreySection {
             height: 53vw;
             min-height: 400px;
-            margin-left: max(9px, 1.56vw);
+            margin-left: max(9px, 0.56vw);
+            margin-right: max(9px, 1.12vw);
 
             background: #F9F9F9;
             box-shadow: inset 0px 0px 40px 30px rgba(201, 201, 201, 0.2);
-            border-radius: 20px;
+            /* border-radius: 20px; */
 
             display: flex;
             align-items: center;
@@ -263,6 +282,7 @@
             </div>
         </div>
     </div>
+    <div class="placeHolder"></div>
     <div class="mainContainer">
         <div class="greySection">
             <div class="greySectionTexts">
@@ -315,7 +335,7 @@
                 </div>
             </div>
         </div>
-        <div class="greySection">
+        <div class="greySectionBottom">
             <div class="greySectionTexts">
                 Artificial Intelligence
                 <a href="artificialIntelligence.html" class="link">
