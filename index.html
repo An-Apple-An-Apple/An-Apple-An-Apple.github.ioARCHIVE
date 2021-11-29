@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,10 +12,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans&family=Roboto:wght@700&display=swap"
         rel="stylesheet">
-    <title>Gavin's Passion Project Take 2</title>
+    <title>Gavin's Passion Project</title>
     <style>
-        body {
-            margin: 0;
+        .body {
+            margin: 0px;
         }
 
         .greyNavigationBar {
@@ -96,6 +97,88 @@
             text-decoration: none;
         }
 
+        /*Since .greyNavigationBar is fixed, it does not take up space, .placeHolder is a blank div used to take up the space of
+          .greyNavigationBar so all div under are placed after .greyNavigationBar not under.*/
+
+        .borderRadius {
+            border-radius: 8px;
+        }
+
+        .placeHolder {
+            padding-top: 45px;
+        }
+
+        .mainContainer {
+            padding: max(14px, 1.12vw);
+        }
+
+        .greySections {
+            height: 53vw;
+            min-height: 400px;
+            max-width: 1450px;
+
+            margin: auto;
+            margin-bottom: max(14px, 1.12vw);
+
+            background: #F3F3F3;
+            /* border-radius: 20px; */
+
+            display: flex;
+            align-items: center;
+        }
+
+        .greySectionBottom {
+            height: 53vw;
+            min-height: 400px;
+            max-width: 1450px;
+
+            margin: auto;
+
+            background: #F3F3F3;
+            /* border-radius: 20px; */
+
+            display: flex;
+            align-items: center;
+        }
+
+        .smallGreySectionContainer {
+            max-width: 1450px;
+
+            margin: auto;
+            margin-bottom: max(14px, 1.12vw);
+
+            display: flex;
+            align-items: center;
+        }
+
+        .smallGreySection {
+            width: 50%;
+        }
+
+        .leftSmallGreySection {
+            height: 53vw;
+            min-height: 400px;
+            margin-right: max(7px, 0.56vw);
+
+            background: #F3F3F3;
+            /* border-radius: 20px; */
+
+            display: flex;
+            align-items: center;
+        }
+
+        .rightSmallGreySection {
+            height: 53vw;
+            min-height: 400px;
+            margin-left: max(7px, 0.56vw);
+
+            background: #F3F3F3;
+            /* border-radius: 20px; */
+
+            display: flex;
+            align-items: center;
+        }
+
         .greySectionTexts {
             position: relative;
             margin: auto;
@@ -114,45 +197,7 @@
             color: #000000;
         }
 
-        .greySectionTextsPlaceHolder {
-            position: relative;
-            margin: auto;
-            height: 82px;
-
-            /* greySectionLargeTexts */
-            font-family: 'Roboto', sans-serif;
-            font-style: normal;
-            font-weight: bold;
-            font-size: max(5vw, 20px);
-            line-height: 82px;
-            /* identical to box height */
-            align-items: center;
-            text-align: center;
-
-            color: #00000000;
-        }
-
-        .greySectionTextsOverLay {
-            position: relative;
-            margin: auto;
-            height: 82px;
-
-            /* greySectionLargeTexts */
-            font-family: 'Roboto', sans-serif;
-            font-style: normal;
-            font-weight: bold;
-            font-size: max(5vw, 20px);
-            line-height: 82px;
-            /* identical to box height */
-            align-items: center;
-            text-align: center;
-
-            color: #ff0000;
-            z-index: 3;
-        }
-
         .learnMoreBox {
-            z-index: 1;
             width: 10.5vw;
             min-width: 84px;
             height: 2.8vw;
@@ -211,83 +256,10 @@
         .link {
             text-decoration: none;
         }
-
-        #base {
-            display: flex;
-            align-items: center;
-        }
-
-
-        #baseDiv {
-            position: fixed;
-            left: 50%;
-            transform: translate(-50%, 0);
-            background-color: #f0f0f0;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-        }
-
-        .greySection {
-            position: fixed;
-            left: 50%;
-            transform: translate(-50%, 0);
-            z-index: 2;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-        }
-
-        #blackScreen {
-            position: relative;
-            width: 100%;
-            background-color: black;
-            z-index: 2;
-            display: flex;
-            align-items: center;
-        }
-
-        #redScreen {
-            position: relative;
-            width: 100%;
-            background-color: rgb(0, 0, 0);
-            z-index: 2;
-            display: flex;
-            align-items: center;
-        }
-
-        #sectionsContainer {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            z-index: 4;
-        }
-
-        .sectionsLeft {
-            margin: auto;
-            margin-right: 25vw;
-            margin-top: 30vw;
-            height: 5px;
-            width: 100px;
-            background-color: white;
-            z-index: 4;
-        }
-
-        .sectionsRight {
-            margin: auto;
-            margin-left: 10vw;
-            margin-top: 30vw;
-            height: 5px;
-            width: 100px;
-            background-color: white;
-            z-index: 4;
-        }
     </style>
 </head>
 
-<body>
+<body class="body">
     <div class="greyNavigationBar">
         <div class="navigationBarIcons">
             <a href="index.html" class="navIcons">
@@ -310,15 +282,14 @@
             </div>
         </div>
     </div>
-    <div style="height: 45px;">
+    <div class="placeHolder"></div>
 
     </div>
-    <div id="base">
-        <div id="baseDiv">
-        </div>
-        <div class="greySection">
-            <div class="greySectionTextsPlaceHolder">
-                placeHolder
+    <div class="mainContainer">
+        <div class="greySections borderRadius">
+            <div class="greySectionTexts">
+                Computer Graphics
+
                 <a href="computerGraphics.html" class="link">
                     <div class="learnMoreBox">
                         <div class="learnMoreContiner">
@@ -331,87 +302,84 @@
                 </a>
             </div>
         </div>
-        <div class="greySection">
-            <div class="greySectionTextsOverLay">
-                Computer Graphics
+        <div class="greySections borderRadius">
+            <div class="greySectionTexts">
+                Link to Redisgned Homepage V2
+
+                <a href="indexCopy2.html" class="link">
+                    <div class="learnMoreBox" style="background-color: red;">
+                        <div class="learnMoreContiner">
+                            <div class="learnMoreTexts">
+                                Learn More
+                            </div>
+                            <img src="Learn More Tri.png" class="learnMoreTri">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="smallGreySectionContainer">
+            <div class="smallGreySection">
+                <div class="leftSmallGreySection borderRadius">
+                    <div class="greySectionTexts">
+                        Render
+                        <a href="render.html" class="link">
+                            <div class="learnMoreBox">
+                                <div class="learnMoreContiner">
+                                    <div class="learnMoreTexts">
+                                        Learn More
+                                    </div>
+                                    <img src="Learn More Tri.png" class="learnMoreTri">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="smallGreySection">
+                <div class="rightSmallGreySection borderRadius">
+                    <div class="greySectionTexts">
+                        Simulation
+                        <a href="simulation.html" class="link">
+                            <div class="learnMoreBox">
+                                <div class="learnMoreContiner">
+                                    <div class="learnMoreTexts">
+                                        Learn More
+                                    </div>
+                                    <img src="Learn More Tri.png" class="learnMoreTri">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="greySectionBottom borderRadius">
+            <div class="greySectionTexts">
+                Artificial Intelligence
+                <a href="artificialIntelligence.html" class="link">
+                    <div class="learnMoreBox">
+                        <div class="learnMoreContiner">
+                            <div class="learnMoreTexts">
+                                Learn More
+                            </div>
+                            <img src="Learn More Tri.png" class="learnMoreTri">
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
-    <div id="blackScreen">
-        <img src="blueRedGradient.png" style="width: 100%; z-index: 4; position: relative;">
-        <div id="sectionsContainer">
-            <div class="sectionsLeft">
-            </div>
-            <div class="sectionsRight">
-            </div>
-        </div>
-    </div>
-    <div id="redScreen">
-    </div>
+
 </body>
-
 <script>
-    const offset = 45;
-
-    function baseDivSize() {
-        var content = document.getElementById("baseDiv");
-        content.style.width = (window.innerWidth - offset * 2) + "px";
-        content.style.height = (window.innerHeight - offset * 3) * 0.7 + "px";
-
+    var borRadVal = "8px";
+    function borderFunction() {
+        var x = document.getElementsByClassName("borderRadius");
+        for (var i = 0; i < x.length; i++)
+            x[i].style.borderRadius = borRadVal;
     }
-
-    function baseSize() {
-        var content = document.getElementById("base");
-
-        content.style.height = window.innerHeight - offset + "px";
-        content.style.width = window.innerWidth + "px";
-    }
-
-    function blackScreenSize() {
-        var content = document.getElementById("blackScreen");
-
-        // content.style.marginTop = 2 * window.innerHeight + "px";
-
-        // content.style.height = window.innerHeight - offset + "px";
-        content.style.width = 100 + "%";
-    }
-
-    function redScreenSize() {
-        var content = document.getElementById("redScreen");
-
-        // content.style.marginTop = 2 * window.innerHeight + "px";
-
-        content.style.height = window.innerHeight - offset + "px";
-        content.style.width = 100 + "%";
-    }
-
-    function imgPadding() {
-        var content = document.getElementById("blackScreen");
-
-        content.style.marginTop = 2 * window.innerHeight + "px";
-
-        content.style.height = window.innerHeight - offset + "px";
-        content.style.width = 100 + "%";
-    }
-
-    baseSize();
-    baseDivSize();
-    blackScreenSize();
-    redScreenSize();
-
-    const baseDiv = document.getElementById("baseDiv");
-
-    const setWidthAndHeight = (el) => {
-        const elementTop = el.getBoundingClientRect().top;
-        var element = document.getElementById("baseDiv");
-        element.style.width = window.innerWidth - elementTop - offset + "px";
-        element.style.height = (window.innerHeight - elementTop - offset * 2) * 0.7 + "px";
-    }
-
-    window.addEventListener('scroll', () => {
-        setWidthAndHeight(base);
-        blackScreenSize();
-    })
+    borderFunction()
 </script>
 
 </html>
