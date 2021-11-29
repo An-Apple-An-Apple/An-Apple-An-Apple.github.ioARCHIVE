@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="rzE8RMcsV1jS2drbS4i-T972wKnzlCS47Zv0LHcVy4k" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans&family=Roboto:wght@700&display=swap"
+        rel="stylesheet">
+    <title>Gavin's Passion Project</title>
+    <style>
+        .body {
+            margin: 0px;
+        }
+
+        .greyNavigationBar {
+            position: fixed;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 45px;
+            background: #000000cb;
+            z-index: 100;
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+        }
+
+        .navigationBarIcons {
+            overflow: scroll;
+            margin: auto;
+            display: flex;
+            width: 815px;
+            height: 22px;
+        }
+
+        .logo {
+            width: 18.03px;
+            height: 22px;
+            float: left;
+        }
+
+        #computerGraphics {
+            position: relative;
+            width: 128px;
+            min-width: 128px;
+            padding-left: 10px;
+
+        }
+
+        #render {
+            position: relative;
+            width: 48px;
+            min-width: 48px;
+            padding-left: 94px;
+
+        }
+
+        #simulation {
+            position: relative;
+            width: 70px;
+            min-width: 70px;
+            padding-left: 94px;
+
+        }
+
+        #artificialIntelligence {
+            position: relative;
+            width: 107px;
+            min-width: 107px;
+            padding-left: 94px;
+
+        }
+
+        #references {
+            position: relative;
+            width: 73x;
+            min-width: 73x;
+            padding-left: 94px;
+
+        }
+
+        .navIcons {
+            font-family: 'Lato', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            color: #D6D6D6;
+            text-decoration: none;
+        }
+
+        /*Since .greyNavigationBar is fixed, it does not take up space, .placeHolder is a blank div used to take up the space of
+          .greyNavigationBar so all div under are placed after .greyNavigationBar not under.*/
+
+        .borderRadius {
+            border-radius: 8px;
+        }
+
+        .placeHolder {
+            padding-top: 45px;
+        }
+
+        .mainContainer {
+            padding: max(14px, 1.12vw);
+        }
+
+        .greySections {
+            height: 53vw;
+            min-height: 400px;
+            max-width: 1450px;
+
+            margin: auto;
+            margin-bottom: max(14px, 1.12vw);
+
+            background: #F3F3F3;
+            /* border-radius: 20px; */
+
+            display: flex;
+            align-items: center;
+        }
+
+        .greySectionBottom {
+            height: 53vw;
+            min-height: 400px;
+            max-width: 1450px;
+
+            margin: auto;
+
+            background: #F3F3F3;
+            /* border-radius: 20px; */
+
+            display: flex;
+            align-items: center;
+        }
+
+        .smallGreySectionContainer {
+            max-width: 1450px;
+
+            margin: auto;
+            margin-bottom: max(14px, 1.12vw);
+
+            display: flex;
+            align-items: center;
+        }
+
+        .smallGreySection {
+            width: 50%;
+        }
+
+        .leftSmallGreySection {
+            height: 53vw;
+            min-height: 400px;
+            margin-right: max(7px, 0.56vw);
+
+            background: #F3F3F3;
+            /* border-radius: 20px; */
+
+            display: flex;
+            align-items: center;
+        }
+
+        .rightSmallGreySection {
+            height: 53vw;
+            min-height: 400px;
+            margin-left: max(7px, 0.56vw);
+
+            background: #F3F3F3;
+            /* border-radius: 20px; */
+
+            display: flex;
+            align-items: center;
+        }
+
+        .greySectionTexts {
+            position: relative;
+            margin: auto;
+            height: 82px;
+
+            /* greySectionLargeTexts */
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: max(5vw, 20px);
+            line-height: 82px;
+            /* identical to box height */
+            align-items: center;
+            text-align: center;
+
+            color: #000000;
+        }
+
+        .learnMoreBox {
+            width: 10.5vw;
+            min-width: 84px;
+            height: 2.8vw;
+            min-height: 22.14px;
+
+            margin: auto;
+            margin-top: 4.84vw;
+
+            background: #C4C4C4;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .learnMoreContiner {
+            width: 116.91;
+            height: 27;
+            display: flex;
+            margin: auto;
+
+        }
+
+        .learnMoreTexts {
+            width: 112px;
+            width: 7.75vw;
+            min-width: 61.22px;
+            height: 27px;
+            height: 1.66vw;
+            min-height: 13.13;
+
+            font-family: "Open Sans", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            /*font-size: 9px;*/
+            /*font-size: 1.2vw;*/
+            font-size: calc(max(9px, 1.2vw));
+            line-height: 1.66vw;
+            text-align: center;
+
+            margin: auto;
+
+            color: #000000;
+
+        }
+
+        .learnMoreTri {
+            width: 0.43vw;
+            min-width: 3.39px;
+            height: 0.78vw;
+            min-height: 6.16px;
+
+            margin: auto;
+            margin-top: max(0.47vw, 3px);
+        }
+
+        .link {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body class="body">
+    <div class="greyNavigationBar">
+        <div class="navigationBarIcons">
+            <a href="index.html" class="navIcons">
+                <img src="Logo.png" class="logo">
+                <div class="navIcons" id="computerGraphics">
+                    Computer Graphics
+                </div>
+            </a>
+            <div class="navIcons" id="render">
+                <a href="render.html" class="navIcons">Render</a>
+            </div>
+            <div class="navIcons" id="simulation">
+                <a href="simulation.html" class="navIcons">Simulation</a>
+            </div>
+            <div class="navIcons" id="artificialIntelligence">
+                <a href="" class="navIcons">Artificial Intelligence</a>
+            </div>
+            <div class="navIcons" id="references">
+                <a href="references.html" class="navIcons">References</a>
+            </div>
+        </div>
+    </div>
+    <div class="placeHolder"></div>
+
+    </div>
+    <div class="mainContainer">
+        <div class="greySections borderRadius">
+            <div class="greySectionTexts">
+                Computer Graphics
+
+                <a href="computerGraphics.html" class="link">
+                    <div class="learnMoreBox">
+                        <div class="learnMoreContiner">
+                            <div class="learnMoreTexts">
+                                Learn More
+                            </div>
+                            <img src="Learn More Tri.png" class="learnMoreTri">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="greySections borderRadius">
+            <div class="greySectionTexts">
+                Link to Redisgned Homepage V2
+
+                <a href="indexCopy2.html" class="link">
+                    <div class="learnMoreBox" style="background-color: red;">
+                        <div class="learnMoreContiner">
+                            <div class="learnMoreTexts">
+                                Learn More
+                            </div>
+                            <img src="Learn More Tri.png" class="learnMoreTri">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="smallGreySectionContainer">
+            <div class="smallGreySection">
+                <div class="leftSmallGreySection borderRadius">
+                    <div class="greySectionTexts">
+                        Render
+                        <a href="render.html" class="link">
+                            <div class="learnMoreBox">
+                                <div class="learnMoreContiner">
+                                    <div class="learnMoreTexts">
+                                        Learn More
+                                    </div>
+                                    <img src="Learn More Tri.png" class="learnMoreTri">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="smallGreySection">
+                <div class="rightSmallGreySection borderRadius">
+                    <div class="greySectionTexts">
+                        Simulation
+                        <a href="simulation.html" class="link">
+                            <div class="learnMoreBox">
+                                <div class="learnMoreContiner">
+                                    <div class="learnMoreTexts">
+                                        Learn More
+                                    </div>
+                                    <img src="Learn More Tri.png" class="learnMoreTri">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="greySectionBottom borderRadius">
+            <div class="greySectionTexts">
+                Artificial Intelligence
+                <a href="artificialIntelligence.html" class="link">
+                    <div class="learnMoreBox">
+                        <div class="learnMoreContiner">
+                            <div class="learnMoreTexts">
+                                Learn More
+                            </div>
+                            <img src="Learn More Tri.png" class="learnMoreTri">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    var borRadVal = "8px";
+    function borderFunction() {
+        var x = document.getElementsByClassName("borderRadius");
+        for (var i = 0; i < x.length; i++)
+            x[i].style.borderRadius = borRadVal;
+    }
+    borderFunction()
+</script>
+
+</html>
