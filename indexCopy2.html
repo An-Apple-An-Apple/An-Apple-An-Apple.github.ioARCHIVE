@@ -96,43 +96,49 @@
             text-decoration: none;
         }
 
+        #base {
+            display: flex;
+            align-items: center;
+        }
+
+
+        #baseDiv {
+            position: fixed;
+            left: 50%;
+            transform: translate(-50%, 0);
+            background-color: #f0f0f0;
+            border-radius: 20px;
+
+        }
+
+        #baseDiv2 {
+            position: fixed;
+            left: 50%;
+            transform: translate(-50%, 0);
+            background-color: #f0f0f0;
+            border-radius: 20px;
+
+        }
+
+        .greySection {
+            position: relative;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            z-index: 2;
+            border-radius: 20px;
+        }
+
+        #blackScreen {
+            position: relative;
+            width: 100%;
+            background-color: black;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+        }
+
         .greySectionTexts {
-            position: relative;
-            margin: auto;
-            height: 82px;
-
-            /* greySectionLargeTexts */
-            font-family: 'Roboto', sans-serif;
-            font-style: normal;
-            font-weight: bold;
-            font-size: max(5vw, 20px);
-            line-height: 82px;
-            /* identical to box height */
-            align-items: center;
-            text-align: center;
-
-            color: #000000;
-        }
-
-        .greySectionTextsPlaceHolder {
-            position: relative;
-            margin: auto;
-            height: 82px;
-
-            /* greySectionLargeTexts */
-            font-family: 'Roboto', sans-serif;
-            font-style: normal;
-            font-weight: bold;
-            font-size: max(5vw, 20px);
-            line-height: 82px;
-            /* identical to box height */
-            align-items: center;
-            text-align: center;
-
-            color: #00000000;
-        }
-
-        .greySectionTextsOverLay {
             position: relative;
             margin: auto;
             height: 82px;
@@ -212,41 +218,6 @@
             text-decoration: none;
         }
 
-        #base {
-            display: flex;
-            align-items: center;
-        }
-
-
-        #baseDiv {
-            position: fixed;
-            left: 50%;
-            transform: translate(-50%, 0);
-            background-color: #f0f0f0;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-        }
-
-        .greySection {
-            position: fixed;
-            left: 50%;
-            transform: translate(-50%, 0);
-            z-index: 2;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-        }
-
-        #blackScreen {
-            position: relative;
-            width: 100%;
-            background-color: black;
-            z-index: 2;
-            display: flex;
-            align-items: center;
-        }
-
         #redScreen {
             position: relative;
             width: 100%;
@@ -265,9 +236,16 @@
             z-index: 4;
         }
 
+        .sectionContainer {
+            margin: auto;
+            height: 100%;
+            width: 40%;
+            background-color: red;
+        }
+
         .sectionsLeft {
             margin: auto;
-            margin-right: 25vw;
+            margin-left: 4vw;
             margin-top: 30vw;
             height: 2px;
             width: 80px;
@@ -277,7 +255,7 @@
 
         .sectionsRight {
             margin: auto;
-            margin-left: 10vw;
+            margin-left: 4vw;
             margin-top: 30vw;
             height: 2px;
             width: 80px;
@@ -323,25 +301,37 @@
     </div>
     <div id="base">
         <div id="baseDiv">
-        </div>
-        <div class="greySection">
-            <div class="greySectionTextsPlaceHolder">
-                placeHolder
-                <a href="computerGraphics.html" class="link">
-                    <div class="learnMoreBox">
-                        <div class="learnMoreContiner">
-                            <div class="learnMoreTexts">
-                                Learn More
+            <!-- <div class="greySection">
+                <div class="greySectionTexts">
+                    Computer Graphics
+                    <a href="computerGraphics.html" class="link">
+                        <div class="learnMoreBox">
+                            <div class="learnMoreContiner">
+                                <div class="learnMoreTexts">
+                                    Learn More
+                                </div>
+                                <img src="Learn More Tri.png" class="learnMoreTri">
                             </div>
-                            <img src="Learn More Tri.png" class="learnMoreTri">
                         </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
+            </div> -->
         </div>
-        <div class="greySection">
-            <div class="greySectionTextsOverLay">
-                Computer Graphics
+        <div id="baseDiv2">
+            <div class="greySection">
+                <div class="greySectionTexts">
+                    Computer Graphics
+                    <a href="computerGraphics.html" class="link">
+                        <div class="learnMoreBox">
+                            <div class="learnMoreContiner">
+                                <div class="learnMoreTexts">
+                                    Learn More
+                                </div>
+                                <img src="Learn More Tri.png" class="learnMoreTri">
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -365,7 +355,14 @@
 
     function baseDivSize() {
         var content = document.getElementById("baseDiv");
-        content.style.width = (window.innerWidth - offset * 2) + "px";
+        content.style.width = (window.innerWidth - offset * 2) * 0.9 + "px";
+        content.style.height = (window.innerHeight - offset * 3) * 0.7 + "px";
+
+    }
+
+    function baseDivSize2() {
+        var content = document.getElementById("baseDiv2");
+        content.style.width = (window.innerWidth - offset * 2) * 0.9 + "px";
         content.style.height = (window.innerHeight - offset * 3) * 0.7 + "px";
 
     }
@@ -380,7 +377,7 @@
     function blackScreenSize() {
         var content = document.getElementById("blackScreen");
 
-        // content.style.marginTop = 2 * window.innerHeight + "px";
+        content.style.marginTop = 0.3 * window.innerHeight + "px";
 
         // content.style.height = window.innerHeight - offset + "px";
         content.style.width = 100 + "%";
@@ -395,14 +392,6 @@
         content.style.width = 100 + "%";
     }
 
-    function imgPadding() {
-        var content = document.getElementById("blackScreen");
-
-        content.style.marginTop = 2 * window.innerHeight + "px";
-
-        content.style.height = window.innerHeight - offset + "px";
-        content.style.width = 100 + "%";
-    }
 
     baseSize();
     baseDivSize();
@@ -414,12 +403,19 @@
     const setWidthAndHeight = (el) => {
         const elementTop = el.getBoundingClientRect().top;
         var element = document.getElementById("baseDiv");
-        element.style.width = window.innerWidth - elementTop - offset + "px";
+        element.style.width = (window.innerWidth - elementTop - offset * 2) * 0.9 + "px";
+        element.style.height = (window.innerHeight - elementTop - offset * 2) * 0.7 + "px";
+    }
+
+    const setWidthAndHeight2 = (el) => {
+        const elementTop = el.getBoundingClientRect().top;
+        var element = document.getElementById("baseDiv2");
         element.style.height = (window.innerHeight - elementTop - offset * 2) * 0.7 + "px";
     }
 
     window.addEventListener('scroll', () => {
         setWidthAndHeight(base);
+        setWidthAndHeight2(base);
         blackScreenSize();
     })
 </script>
